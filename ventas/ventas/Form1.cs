@@ -19,7 +19,19 @@ namespace ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("vive la vida y disfrutala al maximo y abraza a tus seres queridos");
+          
+            {
+                MessageBox.Show("vive libre");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
+
+
+
+
 }

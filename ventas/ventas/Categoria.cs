@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace ventas
 {
-    public class Cliente
+   public class Categoria
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Direccion { get; set; }
-        public Categoria categoria { get; set; }
     }
 }

@@ -287,7 +287,7 @@
             this.telefonoTextBox1.Name = "telefonoTextBox1";
             this.telefonoTextBox1.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox1.TabIndex = 12;
-            this.telefonoTextBox1.TextChanged += new System.EventHandler(this.telefonoTextBox1_TextChanged);
+           
             // 
             // comboBox1
             // 
@@ -313,7 +313,7 @@
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Categorias:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+         
             // 
             // listadeClientesDataGridView
             // 
@@ -385,7 +385,7 @@
             this.Controls.Add(this.listadeClientesBindingSource1BindingNavigator);
             this.Name = "Form2";
             this.Text = "Cliente";
-            this.Load += new System.EventHandler(this.Form2_Load_1);
+ 
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource1BindingNavigator)).EndInit();
             this.listadeClientesBindingSource1BindingNavigator.ResumeLayout(false);
             this.listadeClientesBindingSource1BindingNavigator.PerformLayout();

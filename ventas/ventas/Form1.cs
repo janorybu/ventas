@@ -17,19 +17,28 @@ namespace ventas
         {
             InitializeComponent();
 
-            var productosBL = new ProductosBL();
-            listadeProductosBindingSource.DataSource = productosBL.listadeProductos;
-
-            var categoriasBL = new CategoriaBL();
-            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
+           
            
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        public void cargarDatos(ProductosBL productosBl, CategoriaBL categoriaBL)
+        {
+            
+            listadeProductosBindingSource.DataSource = productosBl.listadeProductos;
+            listadeCategoriasBindingSource.DataSource = categoriaBL.ListadeCategorias;
+        }
+
+        private void listadeProductosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+   }
 
 

@@ -17,11 +17,6 @@ namespace ventas
         {
             InitializeComponent();
 
-            var clientesBL = new ClientesBL();
-            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
-
-            var categoriasBL = new CategoriaBL();
-            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
         }
 
         private void listadeCategoriasBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -32,6 +27,17 @@ namespace ventas
         private void listadeClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public void cargarDatos(ClientesBL clientesBL, CiudadBL ciudadesBL)
+        {
+
+            
+            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
+
+            //var categoriasBL = new CategoriaBL();
+            //listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
+            listadeCiudadesBindingSource.DataSource = ciudadesBL.listadeCiudades;
         }
     }
 }

@@ -57,7 +57,8 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             descripcionLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
@@ -136,7 +137,9 @@
             // 
             // listadeProductosBindingSource
             // 
+            this.listadeProductosBindingSource.AllowNew = true;
             this.listadeProductosBindingSource.DataSource = typeof(ventas.Modelos.Producto);
+            this.listadeProductosBindingSource.CurrentChanged += new System.EventHandler(this.listadeProductosBindingSource_CurrentChanged);
             // 
             // bindingNavigatorCountItem
             // 
@@ -217,7 +220,6 @@
             // listadeProductosBindingNavigatorSaveItem
             // 
             this.listadeProductosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listadeProductosBindingNavigatorSaveItem.Enabled = false;
             this.listadeProductosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeProductosBindingNavigatorSaveItem.Image")));
             this.listadeProductosBindingNavigatorSaveItem.Name = "listadeProductosBindingNavigatorSaveItem";
             this.listadeProductosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
@@ -281,11 +283,12 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.listadeProductosDataGridView.DataSource = this.listadeProductosBindingSource;
-            this.listadeProductosDataGridView.Location = new System.Drawing.Point(224, 56);
+            this.listadeProductosDataGridView.Location = new System.Drawing.Point(81, 185);
             this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
-            this.listadeProductosDataGridView.Size = new System.Drawing.Size(458, 142);
+            this.listadeProductosDataGridView.Size = new System.Drawing.Size(565, 142);
             this.listadeProductosDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -306,16 +309,17 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "CategoriaId";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CategoriaId";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "CategoriaId";
-            this.dataGridViewTextBoxColumn5.DataSource = this.listadeCategoriasBindingSource;
-            this.dataGridViewTextBoxColumn5.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Categoria";
             this.dataGridViewTextBoxColumn5.HeaderText = "Categoria";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn5.ValueMember = "Id";
             // 
             // Form1
             // 
@@ -371,7 +375,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
 

@@ -14,6 +14,12 @@ namespace ventas.Modelos
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
 
+        public Producto()
+        {
+            Categoria = new Categoria(1, "Laptop Dell");
+            
+        }
+
         public Producto(int id, string descripcion, double precio, Categoria categoria)
         {
             Id = id;

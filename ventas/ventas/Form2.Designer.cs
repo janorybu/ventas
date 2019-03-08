@@ -63,7 +63,9 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listadeCiudadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ciudadLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeCategoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeCiudadesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ciudadLabel
@@ -147,7 +150,7 @@
             this.listadeClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeClientesBindingNavigator.Name = "listadeClientesBindingNavigator";
             this.listadeClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(863, 25);
+            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(957, 25);
             this.listadeClientesBindingNavigator.TabIndex = 0;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -162,6 +165,7 @@
             // 
             // listadeClientesBindingSource
             // 
+            this.listadeClientesBindingSource.AllowNew = true;
             this.listadeClientesBindingSource.DataSource = typeof(ventas.Modelos.Cliente);
             // 
             // bindingNavigatorCountItem
@@ -243,7 +247,6 @@
             // listadeClientesBindingNavigatorSaveItem
             // 
             this.listadeClientesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listadeClientesBindingNavigatorSaveItem.Enabled = false;
             this.listadeClientesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeClientesBindingNavigatorSaveItem.Image")));
             this.listadeClientesBindingNavigatorSaveItem.Name = "listadeClientesBindingNavigatorSaveItem";
             this.listadeClientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
@@ -325,11 +328,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.listadeClientesDataGridView.DataSource = this.listadeClientesBindingSource;
-            this.listadeClientesDataGridView.Location = new System.Drawing.Point(216, 42);
+            this.listadeClientesDataGridView.Location = new System.Drawing.Point(236, 42);
             this.listadeClientesDataGridView.Name = "listadeClientesDataGridView";
-            this.listadeClientesDataGridView.Size = new System.Drawing.Size(618, 220);
+            this.listadeClientesDataGridView.Size = new System.Drawing.Size(350, 220);
             this.listadeClientesDataGridView.TabIndex = 14;
             this.listadeClientesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listadeClientesDataGridView_CellContentClick);
             // 
@@ -363,22 +367,27 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Direccion";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "CategoriaId";
+            this.dataGridViewTextBoxColumn6.HeaderText = "CategoriaId";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "CategoriaId";
-            this.dataGridViewTextBoxColumn7.DataSource = this.listadeCategoriasBindingSource;
-            this.dataGridViewTextBoxColumn7.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "categoria";
             this.dataGridViewTextBoxColumn7.HeaderText = "categoria";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn7.ValueMember = "Id";
+            // 
+            // listadeCiudadesBindingSource
+            // 
+            this.listadeCiudadesBindingSource.DataSource = typeof(ventas.Modelos.Ciudad);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 292);
+            this.ClientSize = new System.Drawing.Size(957, 292);
             this.Controls.Add(this.listadeClientesDataGridView);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -401,6 +410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeCategoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeCiudadesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,6 +446,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.BindingSource listadeCiudadesBindingSource;
     }
 }

@@ -14,7 +14,7 @@ namespace ventas.Modelos
         public string Nombre { get; set; }
         public int Telefono { get; set; }
         public string Direccion { get; set; }
-        public string Ciudad { get; set; }
+  
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
 
@@ -25,7 +25,7 @@ namespace ventas.Modelos
             Nombre = nombre;
             Telefono = telefono;
             Direccion = direccion;
-            Ciudad = ciudad;
+            
             Categoria = categoria;
             CategoriaId = categoria.Id;
            

@@ -19,17 +19,11 @@ namespace ventas
         {
             InitializeComponent();
 
-            var productosBL = new ProductosBL();
-            listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
+           
 
             
 
-            var clientesBL = new ClienteBL();
-
-            listadeClientesBindingSource1.DataSource = clientesBL.ListadeClientes;
-
-            var categoriasBL = new CategoriaBL();
-            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
+           
 
         }
 
@@ -46,6 +40,20 @@ namespace ventas
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+        public  void cargarDatos( CategoriaBL categoriaBL)
+        {
+
+
+            
+            listadeCategoriasBindingSource.DataSource = categoriaBL.ListadeCategorias;
+        }
+        public void cargarDatos(ClienteBL clientesBL, CiudadBL ciudadesBL)
+        {
+            
+
+            listadeClientesBindingSource1.DataSource = clientesBL.ListadeClientes;
+            listadeCiudadesBindingSource.DataSource = ciudadesBL.ListadeCiudades;
         }
     }
 }

@@ -7,14 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ventas.BL;
 
 namespace ventas
 {
     public partial class Menu : Form
     {
+
+        CategoriaBL _categoriasBL;
+        ClienteBL _clientesBl;
+        CiudadBL _ciudadesBl;
+
         public Menu()
         {
             InitializeComponent();
+
+            ;
+            _categoriasBL = new CategoriaBL();
+            _clientesBl = new ClienteBL();
+            _ciudadesBl = new CiudadBL();
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,22 +39,15 @@ namespace ventas
 
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var formProductos = new Form2();
-            formProductos.MdiParent = this;
-            
-            
-
-            formProductos.Show();
-        }
+        
+        
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formClientes = new Form2();
             formClientes.MdiParent = this;
-            
-            
+
+            formClientes.cargarDatos(_clientesBl, _ciudadesBl );
 
             formClientes.Show();
         }

@@ -49,7 +49,7 @@
     <Compile Include="BL\CategoriaBL.cs" />
     <Compile Include="BL\CiudadBL.cs" />
     <Compile Include="BL\ClienteBL.cs" />
-    <Compile Include="BL\ProductosBL.cs" />
+    <Compile Include="Categoria.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,7 +71,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\Producto.cs" />
+    <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

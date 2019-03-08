@@ -13,47 +13,25 @@ namespace ventas
 {
     public partial class Form2 : Form
     {
-        public object listadeCategoriasBindingSource1;
-
         public Form2()
         {
             InitializeComponent();
 
-           
+            var clientesBL = new ClientesBL();
+            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
 
-            
-
-           
-
+            var categoriasBL = new CategoriaBL();
+            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void listadeCategoriasBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listadeClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-        public  void cargarDatos( CategoriaBL categoriaBL)
-        {
-
-
-            
-            listadeCategoriasBindingSource.DataSource = categoriaBL.ListadeCategorias;
-        }
-        public void cargarDatos(ClienteBL clientesBL, CiudadBL ciudadesBL)
-        {
-            
-
-            listadeClientesBindingSource1.DataSource = clientesBL.ListadeClientes;
-            listadeCiudadesBindingSource.DataSource = ciudadesBL.ListadeCiudades;
         }
     }
 }

@@ -19,12 +19,21 @@ namespace ventas.BL
         }
         private void CrearDatosdePrueba()
         {
-            var categoria1 = new Categoria(1, "Laptos");
-            var categoria2 = new Categoria(2, "Accesorios");
+           // var categoria1 = new Categoria(1, "Laptos");
+            //var categoria2 = new Categoria(2, "Accesorios");
             
-            ListadeCategorias.Add(categoria1);
-            ListadeCategorias.Add(categoria2);
+            //ListadeCategorias.Add(categoria1);
+            //ListadeCategorias.Add(categoria2);
+
+            var categoria3 = new Categoria(1, "nombre");
+            var categoria4 = new Categoria(2, "Ciudades");
+
+            ListadeCategorias.Add(categoria3);
+            ListadeCategorias.Add(categoria4);
+
            
         }
+
+        
     }
 }

@@ -64,7 +64,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listadeCiudadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ciudadLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -328,12 +327,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.dataGridViewTextBoxColumn6});
             this.listadeClientesDataGridView.DataSource = this.listadeClientesBindingSource;
-            this.listadeClientesDataGridView.Location = new System.Drawing.Point(236, 42);
+            this.listadeClientesDataGridView.Location = new System.Drawing.Point(204, 60);
             this.listadeClientesDataGridView.Name = "listadeClientesDataGridView";
-            this.listadeClientesDataGridView.Size = new System.Drawing.Size(350, 220);
+            this.listadeClientesDataGridView.Size = new System.Drawing.Size(641, 220);
             this.listadeClientesDataGridView.TabIndex = 14;
             this.listadeClientesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listadeClientesDataGridView_CellContentClick);
             // 
@@ -372,12 +370,6 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "CategoriaId";
             this.dataGridViewTextBoxColumn6.HeaderText = "CategoriaId";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "categoria";
-            this.dataGridViewTextBoxColumn7.HeaderText = "categoria";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // listadeCiudadesBindingSource
             // 

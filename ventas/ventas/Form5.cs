@@ -15,9 +15,12 @@ namespace ventas
     public partial class Form5 : Form
     {
         ComprasBL _comprasBL;
+        ProveedoresBL _proveedoresBL;
+        ProductosBL _productosBL;
         public Form5()
         {
             InitializeComponent();
+            
         }
 
         private void comprasDetalleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -25,11 +28,15 @@ namespace ventas
 
         }
 
-        public void cargarDatos(ComprasBL comprasBL, ClientesBL clientesBL, ProductosBL productosBL)
+        public void cargarDatos(ComprasBL comprasBL, ProveedoresBL proveedoresBL, ProductosBL productosBL)
         {
+            _comprasBL = comprasBL;
+            _proveedoresBL = proveedoresBL;
+            _productosBL = productosBL;
+
           
             listadeComprasBindingSource.DataSource = comprasBL.ListadeCompras;
-            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
+            listadeProveedoresBindingSource.DataSource = proveedoresBL.ListadeProveedores;
             listadeProductosBindingSource.DataSource = productosBL.listadeProductos;
         }
 
@@ -40,7 +47,7 @@ namespace ventas
             compras.CalcularTotalCompras();
 
 
-            listadeClientesBindingSource.ResetBindings(false);
+            listadeComprasBindingSource.ResetBindings(false);
         }
     }
 }

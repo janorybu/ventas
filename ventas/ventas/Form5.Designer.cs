@@ -39,7 +39,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.listadeComprasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.listadeComprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -57,16 +56,16 @@
             this.impuestoTextBox = new System.Windows.Forms.TextBox();
             this.subtotalTextBox = new System.Windows.Forms.TextBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comprasDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comprasDetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listadeComprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listadeProveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -76,11 +75,11 @@
             totalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listadeComprasBindingNavigator)).BeginInit();
             this.listadeComprasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeComprasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comprasDetalleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comprasDetalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeComprasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProveedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -184,10 +183,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // listadeComprasBindingSource
-            // 
-            this.listadeComprasBindingSource.DataSource = typeof(ventas.Modelos.Compras);
             // 
             // bindingNavigatorCountItem
             // 
@@ -323,10 +318,6 @@
             this.totalTextBox.Size = new System.Drawing.Size(200, 20);
             this.totalTextBox.TabIndex = 14;
             // 
-            // listadeProductosBindingSource
-            // 
-            this.listadeProductosBindingSource.DataSource = typeof(ventas.Modelos.Producto);
-            // 
             // comprasDetalleBindingSource
             // 
             this.comprasDetalleBindingSource.DataMember = "ComprasDetalle";
@@ -335,7 +326,7 @@
             // comboBox1
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listadeComprasBindingSource, "ClienteId", true));
-            this.comboBox1.DataSource = this.listadeClientesBindingSource;
+            this.comboBox1.DataSource = this.listadeProveedoresBindingSource;
             this.comboBox1.DisplayMember = "Nombre";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(92, 41);
@@ -343,10 +334,6 @@
             this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 16;
             this.comboBox1.ValueMember = "Id";
-            // 
-            // listadeClientesBindingSource
-            // 
-            this.listadeClientesBindingSource.DataSource = typeof(ventas.Modelos.Cliente);
             // 
             // comprasDetalleDataGridView
             // 
@@ -356,8 +343,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.dataGridViewTextBoxColumn7});
             this.comprasDetalleDataGridView.DataSource = this.comprasDetalleBindingSource;
             this.comprasDetalleDataGridView.Location = new System.Drawing.Point(92, 172);
             this.comprasDetalleDataGridView.Name = "comprasDetalleDataGridView";
@@ -382,6 +368,10 @@
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn2.ValueMember = "Id";
             // 
+            // listadeProductosBindingSource
+            // 
+            this.listadeProductosBindingSource.DataSource = typeof(ventas.Modelos.Producto);
+            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Cantidad";
@@ -394,17 +384,19 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Costo";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // dataGridViewTextBoxColumn8
+            // listadeComprasBindingSource
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "TotalCompra";
-            this.dataGridViewTextBoxColumn8.HeaderText = "TotalCompra";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.listadeComprasBindingSource.DataSource = typeof(ventas.Modelos.Compras);
+            // 
+            // listadeProveedoresBindingSource
+            // 
+            this.listadeProveedoresBindingSource.DataSource = typeof(ventas.Modelos.Proveedores);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 404);
+            this.ClientSize = new System.Drawing.Size(786, 412);
             this.Controls.Add(this.comprasDetalleDataGridView);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(activoLabel);
@@ -426,11 +418,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeComprasBindingNavigator)).EndInit();
             this.listadeComprasBindingNavigator.ResumeLayout(false);
             this.listadeComprasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeComprasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comprasDetalleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comprasDetalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeComprasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProveedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,15 +452,14 @@
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.BindingSource comprasDetalleBindingSource;
         private System.Windows.Forms.BindingSource listadeProductosBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource listadeClientesBindingSource;
         private System.Windows.Forms.DataGridView comprasDetalleDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.BindingSource listadeProveedoresBindingSource;
     }
 }

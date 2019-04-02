@@ -15,6 +15,12 @@ namespace ventas.Modelos
         public string Direccion { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
+
+
+        public Proveedores()
+        {
+            Categoria = new Categoria(1, "San Pedro Sula");
+        }
         
 
        

@@ -17,7 +17,7 @@ namespace ventas.BL
             ListadeProveedores = new BindingList<Proveedores>();
             
         }
-        private void CrearDatosdePrueba()
+        public void CrearDatosdePrueba()
         {
             var categoria1 = new Categoria(1, "Nombres");
             var categoria2 = new Categoria(2, "Proveedores");

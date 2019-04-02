@@ -329,7 +329,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.listadeClientesDataGridView.DataSource = this.listadeClientesBindingSource;
-            this.listadeClientesDataGridView.Location = new System.Drawing.Point(204, 60);
+            this.listadeClientesDataGridView.Location = new System.Drawing.Point(238, 35);
             this.listadeClientesDataGridView.Name = "listadeClientesDataGridView";
             this.listadeClientesDataGridView.Size = new System.Drawing.Size(641, 220);
             this.listadeClientesDataGridView.TabIndex = 14;
@@ -439,7 +439,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.BindingSource listadeCiudadesBindingSource;
     }
 }

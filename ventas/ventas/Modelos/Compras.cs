@@ -58,7 +58,7 @@ namespace ventas.Modelos
 
         public int Cantidad { get; set; }
         public double Costo { get; set; }
-        public double TotalCompra { get; set; }
+        public double Total { get; set; }
 
         public ComprasDetalle()
         {
@@ -69,8 +69,8 @@ namespace ventas.Modelos
         public double CalcularComprasDetalle(double costo)
         {
             Costo = costo;
-            TotalCompra = Cantidad * Costo;
-            return TotalCompra;
+            Total = Cantidad * Costo;
+            return Total;
 
         }
     }

@@ -77,12 +77,6 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuCompras.Designer.cs">
-      <DependentUpon>MenuCompras.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modelos\Ciudad.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Form2.cs">
@@ -121,9 +115,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCompras.resx">
-      <DependentUpon>MenuCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

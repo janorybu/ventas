@@ -27,8 +27,7 @@ namespace ventas.Modelos
             Id = id;
             Nombre = nombre;
             Telefono = telefono;
-           
-            
+                       
            
 
         }

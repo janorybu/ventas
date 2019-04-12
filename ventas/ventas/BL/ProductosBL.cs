@@ -55,6 +55,7 @@ namespace ventas.BL
             var producto2 = new Producto(2, "Laptop Asus", 10000, categoria1);
             var producto3 = new Producto(3, "Mouse Logitech", 200, categoria2);
 
+
             listadeProductos.Add(producto1);
             listadeProductos.Add(producto2);
             listadeProductos.Add(producto3);

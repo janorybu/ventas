@@ -11,7 +11,8 @@ namespace ventas.Modelos
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int Telefono { get; set; }
-       
+        public byte[] Foto { get; set; }
+
 
 
         public Proveedores()

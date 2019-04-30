@@ -40,7 +40,7 @@ namespace ventas
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Agregar_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
             openFileDialog1.ShowDialog();
@@ -51,9 +51,15 @@ namespace ventas
             {
                 var fileInfo = new FileInfo(archivo);
                 var fileStream = fileInfo.OpenRead();
+                
 
                 pictureBox1.Image = Image.FromStream(fileStream);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
         }
     }
    }

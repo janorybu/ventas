@@ -98,16 +98,14 @@ namespace ventas
 
             proveedoresToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeVerProveedores;
             comprasToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeVerCompras;
-
-            reporteToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeVerReportes;
-           
+            reporteDeClientesToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeVerReportes;
             
         }
 
         private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formReportedeProductos = new FormReporteProductos();
-            formReportedeProductos.cargarDatos(_productosBL);
+            var formReportedeProductos = new FormReportedeProductos();
+            formReportedeProductos.CargarDatos(_productosBL);
             formReportedeProductos.MdiParent = this;
 
             formReportedeProductos.Show();
@@ -116,11 +114,38 @@ namespace ventas
         private void totalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formReportedeVentas = new FormReportedeVentas();
-            formReportedeVentas.cargarDatos(_facturaBL, _clientesBL );
+            formReportedeVentas.CargarDatos(_facturaBL, _clientesBL);
             formReportedeVentas.MdiParent = this;
 
             formReportedeVentas.Show();
+        }
 
+        private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeClientes = new FormReportedeClientes();
+            formReportedeClientes.CargarDatos(_clientesBL);
+            formReportedeClientes.MdiParent = this;
+
+            formReportedeClientes.Show();
+        }
+
+        private void reporteDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeCompras = new FormReportedeCompras();
+            formReportedeCompras.CargarDatos(_comprasBL, _proveedoresBL);
+            formReportedeCompras.MdiParent = this;
+
+            formReportedeCompras.Show();
+        }
+
+        private void reporteDeProductosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var formReportedeProveedores = new FormReportedeProveedores();
+            formReportedeProveedores.CargarDatos(_proveedoresBL);
+            formReportedeProveedores.MdiParent = this;
+
+
+            formReportedeProveedores.Show();
         }
     }
 }

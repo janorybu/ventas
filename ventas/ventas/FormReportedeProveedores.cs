@@ -11,33 +11,27 @@ using ventas.BL;
 
 namespace ventas
 {
-    public partial class FormReportedeVentas : Form
+    public partial class FormReportedeProveedores : Form
     {
-        public FormReportedeVentas()
+        public FormReportedeProveedores()
         {
             InitializeComponent();
         }
-        public void  CargarDatos(FacturaBL facturaBL, ClientesBL clientesBL)
+
+        public void CargarDatos(ProveedoresBL proveedoresBL)
         {
             var bindinSource = new BindingSource();
             bindinSource.DataSource =
-                from f in facturaBL.ListadeFacturas
+                from x in proveedoresBL.ListadeProveedores
                 select new
                 {
-
-                    Id = f.Id,
-                    Fecha = f.Fecha,
-                    Cliente = clientesBL
-                    .ListadeClientes.FirstOrDefault(r => r.Id == f.ClienteId)
-                    .Nombre,
-                    Subtotal = f.Subtotal,
-                    Impuesto = f.Impuesto,
-                    Total = f.Total,
-                    Activo = f.Activo
+                    Foto = x.Foto,
+                    Id = x.Id,
+                    Nombre = x.Nombre,
+                    Telefono = x.Telefono,
                    
                 };
-
-            var reporte = new ReportedeFacturas();
+            var reporte = new ReportedeProveedores();
             reporte.SetDataSource(bindinSource);
 
             crystalReportViewer1.ReportSource = reporte;

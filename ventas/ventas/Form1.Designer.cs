@@ -60,7 +60,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Agregar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             descripcionLabel = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@
             this.listadeProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeProductosBindingNavigator.Name = "listadeProductosBindingNavigator";
             this.listadeProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeProductosBindingNavigator.Size = new System.Drawing.Size(690, 25);
+            this.listadeProductosBindingNavigator.Size = new System.Drawing.Size(728, 25);
             this.listadeProductosBindingNavigator.TabIndex = 0;
             this.listadeProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -291,9 +291,9 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.listadeProductosDataGridView.DataSource = this.listadeProductosBindingSource;
-            this.listadeProductosDataGridView.Location = new System.Drawing.Point(81, 185);
+            this.listadeProductosDataGridView.Location = new System.Drawing.Point(81, 207);
             this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
-            this.listadeProductosDataGridView.Size = new System.Drawing.Size(565, 142);
+            this.listadeProductosDataGridView.Size = new System.Drawing.Size(565, 120);
             this.listadeProductosDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -329,32 +329,33 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listadeProductosBindingSource, "foto", true));
-            this.pictureBox1.Location = new System.Drawing.Point(455, 0);
+            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listadeProductosBindingSource, "Foto", true));
+            this.pictureBox1.Location = new System.Drawing.Point(509, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(172, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // Agregar
             // 
-            this.button1.Location = new System.Drawing.Point(455, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Agregar.Location = new System.Drawing.Point(509, 156);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(75, 23);
+            this.Agregar.TabIndex = 12;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(585, 145);
+            this.button2.Location = new System.Drawing.Point(606, 156);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
             this.button2.Text = "Remover";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // openFileDialog1
             // 
@@ -364,9 +365,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 271);
+            this.ClientSize = new System.Drawing.Size(728, 297);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Agregar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listadeProductosDataGridView);
             this.Controls.Add(this.label1);
@@ -421,7 +422,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Agregar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }

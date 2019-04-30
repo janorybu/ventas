@@ -61,9 +61,6 @@
     <Compile Include="BL\ProductosBL.cs" />
     <Compile Include="BL\ProveedorBL.cs" />
     <Compile Include="BL\UsuariosBL.cs" />
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,17 +84,35 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReportedeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportedeClientes.Designer.cs">
+      <DependentUpon>FormReportedeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportedeCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportedeCompras.Designer.cs">
+      <DependentUpon>FormReportedeCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportedeProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportedeProductos.Designer.cs">
+      <DependentUpon>FormReportedeProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportedeProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportedeProveedores.Designer.cs">
+      <DependentUpon>FormReportedeProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReportedeVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormReportedeVentas.Designer.cs">
       <DependentUpon>FormReportedeVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReporteProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReporteProductos.Designer.cs">
-      <DependentUpon>FormReporteProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -133,6 +148,12 @@
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportedeCompras.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportedeCompras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReportedeFacturas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +164,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportedeProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportedeProveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportedeProveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteedeClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteedeClientes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -160,11 +193,20 @@
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportedeClientes.resx">
+      <DependentUpon>FormReportedeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportedeCompras.resx">
+      <DependentUpon>FormReportedeCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportedeProductos.resx">
+      <DependentUpon>FormReportedeProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportedeProveedores.resx">
+      <DependentUpon>FormReportedeProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReportedeVentas.resx">
       <DependentUpon>FormReportedeVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteProductos.resx">
-      <DependentUpon>FormReporteProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -181,6 +223,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportedeCompras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportedeCompras.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportedeFacturas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportedeFacturas.cs</LastGenOutput>
@@ -188,6 +234,14 @@
     <EmbeddedResource Include="ReportedeProductos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportedeProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportedeProveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportedeProveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteedeClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteedeClientes.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

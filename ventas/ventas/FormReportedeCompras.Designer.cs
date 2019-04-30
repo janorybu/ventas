@@ -1,6 +1,6 @@
 ﻿namespace ventas
 {
-    partial class FormReportedeVentas
+    partial class FormReportedeCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -40,18 +40,18 @@
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ShowGroupTreeButton = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(489, 304);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(523, 282);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // FormReportedeVentas
+            // FormReportedeCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 304);
+            this.ClientSize = new System.Drawing.Size(523, 282);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "FormReportedeVentas";
-            this.Text = "FormReportedeVentas";
+            this.Name = "FormReportedeCompras";
+            this.Text = "FormReportedeCompras";
             this.ResumeLayout(false);
 
         }

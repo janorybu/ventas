@@ -11,37 +11,37 @@ using ventas.BL;
 
 namespace ventas
 {
-    public partial class FormReportedeVentas : Form
+    public partial class FormReportedeClientes : Form
     {
-        public FormReportedeVentas()
+        public FormReportedeClientes()
         {
             InitializeComponent();
         }
-        public void  CargarDatos(FacturaBL facturaBL, ClientesBL clientesBL)
+        public void CargarDatos(ClientesBL clientesBL)
         {
             var bindinSource = new BindingSource();
             bindinSource.DataSource =
-                from f in facturaBL.ListadeFacturas
+                from c in clientesBL.ListadeClientes
                 select new
                 {
+                    Foto = c.Foto,
+                    Id = c.Id,
+                    Nombre = c.Nombre,
+                    Telefono = c.Telefono,
+                    Ciudad = c.Ciudad,
+                    Direccion = c.Direccion,
+                    Categoria = c.Categoria
 
-                    Id = f.Id,
-                    Fecha = f.Fecha,
-                    Cliente = clientesBL
-                    .ListadeClientes.FirstOrDefault(r => r.Id == f.ClienteId)
-                    .Nombre,
-                    Subtotal = f.Subtotal,
-                    Impuesto = f.Impuesto,
-                    Total = f.Total,
-                    Activo = f.Activo
+
                    
                 };
 
-            var reporte = new ReportedeFacturas();
+            var reporte = new ReporteedeClientes();
             reporte.SetDataSource(bindinSource);
 
             crystalReportViewer1.ReportSource = reporte;
             crystalReportViewer1.RefreshReport();
+
         }
     }
 }

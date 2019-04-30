@@ -11,33 +11,32 @@ using ventas.BL;
 
 namespace ventas
 {
-    public partial class FormReporteProductos : Form
+    public partial class FormReportedeProductos : Form
     {
-        public FormReporteProductos()
+        public FormReportedeProductos()
         {
             InitializeComponent();
         }
 
-        public void cargarDatos(ProductosBL productosBL)
+        public void CargarDatos (ProductosBL productosBL)
         {
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource =
+            var bindinSource = new BindingSource();
+            bindinSource.DataSource =
                 from p in productosBL.listadeProductos
-                select new
-                {
+                select new {
+                    Foto = p.Foto,
                     Id = p.Id,
                     Descripcion = p.Descripcion,
-                    Categoria = p.Categoria.Descripcion,
                     Precio = p.Precio,
-
-
+                    Categoria = p.Categoria.Descripcion
                 };
 
             var reporte = new ReportedeProductos();
-            reporte.SetDataSource(bindingSource);
+            reporte.SetDataSource(bindinSource);
 
             crystalReportViewer1.ReportSource = reporte;
             crystalReportViewer1.RefreshReport();
+
         }
     }
 }
